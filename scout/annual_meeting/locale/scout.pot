@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scout.annual_meeting 2012\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-10-01 16:58+0200\n"
+"POT-Creation-Date: 2012-10-02 11:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
+
+#. Default: All users will be given view and discuss permissions INSTANTLY if they
+#. request it.
+#: scout/annual_meeting/views/components/request_access.py:20
+msgid "meeting_access_view_and_discuss_label"
+msgstr ""
+
+#: scout/annual_meeting/views/components/request_access.py:41
+msgid "Access granted!"
+msgstr ""
+
+#. Default: This meeting allows anyone to request access to it. You only need to
+#. click below to get view and discuss permissions instantly.
+#: scout/annual_meeting/views/components/request_access.py:45
+msgid "meeting_access_view_and_discuss_description"
+msgstr ""
 
 #: scout/annual_meeting/views/components/user_tags.py:22
 msgid "Support"

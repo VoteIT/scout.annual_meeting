@@ -9,15 +9,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scout.annual_meeting 2012\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-10-01 16:58+0200\n"
-"PO-Revision-Date: 2012-10-02 10:50+0100\n"
+"POT-Creation-Date: 2012-10-02 11:57+0200\n"
+"PO-Revision-Date: 2012-10-02 12:01+0100\n"
 "Last-Translator: Fredrik Nilson <sassur@gmail.com>\n"
 "Language-Team: sv <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
+"X-Generator: Poedit 1.5.3\n"
+
+#. Default: All users will be given view and discuss permissions INSTANTLY if
+#. they
+#. request it.
+#: scout/annual_meeting/views/components/request_access.py:20
+msgid "meeting_access_view_and_discuss_label"
+msgstr ""
+"Alla användare ges läs- och dikussionsrättigheter OMEDELBART om de begär det."
+
+#: scout/annual_meeting/views/components/request_access.py:41
+msgid "Access granted!"
+msgstr "Åtkomst beviljad"
+
+#. Default: This meeting allows anyone to request access to it. You only need
+#. to
+#. click below to get view and discuss permissions instantly.
+#: scout/annual_meeting/views/components/request_access.py:45
+msgid "meeting_access_view_and_discuss_description"
+msgstr ""
+"Detta möte låter alla som begär det få  läs- och dikussionsrättigheter. Du "
+"behöver bara klicka nedan för att få tillgång."
 
 #: scout/annual_meeting/views/components/user_tags.py:22
 msgid "Support"
@@ -30,4 +52,3 @@ msgstr "stödjer detta"
 #: scout/annual_meeting/views/components/user_tags.py:37
 msgid "Remove ${display_name}"
 msgstr "Ta bort ${display_name}"
-
