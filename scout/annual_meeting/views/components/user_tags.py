@@ -1,8 +1,11 @@
 from betahaus.viewcomponent import view_action
 from pyramid.renderers import render
 from pyramid.traversal import find_resource
+from pyramid.traversal import find_interface
 
+from voteit.core.models.interfaces import IMeeting
 from voteit.core.models.interfaces import IUserTags
+from voteit.core.security import ROLE_VOTER
 
 from scout.annual_meeting import ScoutMF as _
 
@@ -14,7 +17,17 @@ def user_tag_i_support(brain, request, va, **kw):
         as context, rather than a full object.
     """
     api = kw['api']
+    
     obj = find_resource(api.root, brain['path'])
+    # Only available on proposals
+    if not obj.content_type == 'Proposal':
+        return "" 
+    
+    # only available if users has the vote role
+    meeting = find_interface(obj, IMeeting)
+    if ROLE_VOTER not in meeting.get_groups(api.userid):
+        return ""
+    
     show_form = kw.get('show_form', True) 
     user_tags = request.registry.getAdapter(obj, IUserTags)
     userids = user_tags.userids_for_tag('support')

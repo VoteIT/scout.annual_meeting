@@ -2,11 +2,15 @@ from pyramid.view import view_config
 from pyramid.response import Response
 from pyramid.url import resource_url
 from pyramid.httpexceptions import HTTPFound
+from pyramid.httpexceptions import HTTPForbidden
+from pyramid.traversal import find_interface
 
 from voteit.core.views.api import APIView
 from voteit.core.models.interfaces import IUserTags
 from voteit.core.models.interfaces import IBaseContent
+from voteit.core.models.interfaces import IMeeting
 from voteit.core.security import VIEW
+from voteit.core.security import ROLE_VOTER
 
 from scout.annual_meeting import ScoutMF as _
 
@@ -33,6 +37,15 @@ class UserTagsView(object):
         #FIXME: Use normal colander Schema + CSRF?
         request = self.request
         api = self.api
+        
+        # Only available on proposals
+        if not request.context.content_type == 'Proposal':
+            raise Forbidden() 
+        
+        # only available if users has the vote role
+        meeting = find_interface(request.context, IMeeting)
+        if ROLE_VOTER not in meeting.get_groups(api.userid):
+            raise HTTPForbidden()
 
         tag = request.POST.get('tag')
         do = int(request.POST.get('do')) #0 for remove, 1 for add
