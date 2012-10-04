@@ -23,12 +23,12 @@ def user_tag_i_support(brain, request, va, **kw):
     if not obj.content_type == 'Proposal':
         return "" 
     
-    # only available if users has the vote role
+    # only show form if users has the vote role
+    show_form = False
     meeting = find_interface(obj, IMeeting)
-    if ROLE_VOTER not in meeting.get_groups(api.userid):
-        return ""
+    if ROLE_VOTER in meeting.get_groups(api.userid):
+        show_form = True
     
-    show_form = kw.get('show_form', True) 
     user_tags = request.registry.getAdapter(obj, IUserTags)
     userids = user_tags.userids_for_tag('support')
     #Note: It's not possible to have nested translation strings. So we do the translation here in advance.
