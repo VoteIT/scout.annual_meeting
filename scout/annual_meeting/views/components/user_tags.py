@@ -65,3 +65,13 @@ def user_tag_i_support(brain, request, va, **kw):
     response['show_form'] = show_form
 
     return render('voteit.core.views:templates/snippets/user_tag.pt', response, request = request)
+
+
+@view_action('user_tags', 'like')
+def user_tag_scout_like(brain, request, va, **kw):
+    # only display like on Discussion Posts
+    if not brain['content_type'] == 'DiscussionPost':
+        return "" 
+    
+    from voteit.core.views.components.user_tags import user_tag_like
+    return user_tag_like(brain, request, va, **kw)
