@@ -61,7 +61,7 @@ def user_tag_i_support(brain, request, va, **kw):
 
     response['userids'] = userids
     response['has_entries'] = bool(response['selected'] or userids)
-    response['tagging_users_url'] =" %s/_tagging_users?tag=%s&display_name=%s&expl_display_name=%s" % (brain_url, 'i_support', display_name, expl_display_name)
+    response['tagging_users_url'] =" %s/_tagging_users?tag=%s&display_name=%s&expl_display_name=%s" % (brain_url, 'support', display_name, expl_display_name)
     response['show_form'] = show_form
 
     return render('voteit.core.views:templates/snippets/user_tag.pt', response, request = request)
