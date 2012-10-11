@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scout.annual_meeting 2012\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-10-02 11:57+0200\n"
+"POT-Creation-Date: 2012-10-11 13:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
+#: scout/annual_meeting/schemas/user.py:13
+#: scout/annual_meeting/views/templates/participants.pt:33
+#: scout/annual_meeting/views/templates/snippets/user_basic_info.pt:9
+msgid "Scout group"
+msgstr ""
+
 #. Default: All users will be given view and discuss permissions INSTANTLY if they
 #. request it.
-#: scout/annual_meeting/views/components/request_access.py:20
+#: scout/annual_meeting/views/components/request_access.py:19
 msgid "meeting_access_view_and_discuss_label"
 msgstr ""
 
-#: scout/annual_meeting/views/components/request_access.py:41
+#: scout/annual_meeting/views/components/request_access.py:40
 msgid "Access granted!"
 msgstr ""
 
 #. Default: This meeting allows anyone to request access to it. You only need to
 #. click below to get view and discuss permissions instantly.
-#: scout/annual_meeting/views/components/request_access.py:45
+#: scout/annual_meeting/views/components/request_access.py:44
 msgid "meeting_access_view_and_discuss_description"
 msgstr ""
 
-#: scout/annual_meeting/views/components/user_tags.py:22
+#: scout/annual_meeting/views/components/user_tags.py:35
 msgid "Support"
 msgstr ""
 
-#: scout/annual_meeting/views/components/user_tags.py:23
+#: scout/annual_meeting/views/components/user_tags.py:36
 msgid "Support this"
 msgstr ""
 
-#: scout/annual_meeting/views/components/user_tags.py:37
+#: scout/annual_meeting/views/components/user_tags.py:50
 msgid "Remove ${display_name}"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:17
+msgid "Participants"
+msgstr ""
+
+#. Default: Click the icons to change permission. Any permission that's changed
+#. will be listed in bold. When you're done, click save at the bottom. If all
+#. permissions are removed from a user, that user is removed from the meeting.
+#: scout/annual_meeting/views/templates/participants.pt:19
+msgid "participants_form_instructions"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:29
+msgid "UserID"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:30
+msgid "First name"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:31
+msgid "Last name"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:32
+#: scout/annual_meeting/views/templates/snippets/user_basic_info.pt:13
+msgid "Email"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:34
+msgid "View"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:35
+msgid "Discuss"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:36
+msgid "Propose"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:37
+msgid "Voter"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:38
+msgid "Moderate"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:39
+msgid "Administrator"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:45
+#: scout/annual_meeting/views/templates/participants.pt:50
+#: scout/annual_meeting/views/templates/participants.pt:55
+#: scout/annual_meeting/views/templates/participants.pt:60
+#: scout/annual_meeting/views/templates/participants.pt:65
+msgid "all"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:46
+#: scout/annual_meeting/views/templates/participants.pt:51
+#: scout/annual_meeting/views/templates/participants.pt:56
+#: scout/annual_meeting/views/templates/participants.pt:61
+#: scout/annual_meeting/views/templates/participants.pt:66
+msgid "none"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:100
+msgid "Save"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:107
+msgid "Back"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:112
+msgid "Invite participants"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:116
+msgid "Add participant"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:121
+msgid "Yes"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/participants.pt:122
+msgid "No"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/snippets/user_basic_info.pt:16
+msgid "About me"
+msgstr ""
+
+#: scout/annual_meeting/views/templates/snippets/user_basic_info.pt:18
+msgid "This user hasn't entered anything"
 msgstr ""
 
